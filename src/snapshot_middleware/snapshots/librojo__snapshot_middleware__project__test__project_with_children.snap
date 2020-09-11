@@ -1,0 +1,31 @@
+---
+source: src/snapshot_middleware/project.rs
+expression: instance_snapshot
+---
+snapshot_id: ~
+metadata:
+  ignore_unknown_instances: true
+  instigating_source:
+    Path: /foo.project.json
+  relevant_paths:
+    - /foo.project.json
+  context: {}
+name: children
+class_name: Folder
+properties: {}
+children:
+  - snapshot_id: ~
+    metadata:
+      ignore_unknown_instances: true
+      instigating_source:
+        ProjectNode:
+          - /foo.project.json
+          - Child
+          - $className: Model
+          - Folder
+      relevant_paths: []
+      context: {}
+    name: Child
+    class_name: Model
+    properties: {}
+    children: []

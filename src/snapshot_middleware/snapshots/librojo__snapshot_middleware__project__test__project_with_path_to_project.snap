@@ -1,0 +1,17 @@
+---
+source: src/snapshot_middleware/project.rs
+expression: instance_snapshot
+---
+snapshot_id: ~
+metadata:
+  ignore_unknown_instances: true
+  instigating_source:
+    Path: /foo/default.project.json
+  relevant_paths:
+    - /foo/other.project.json
+    - /foo/default.project.json
+  context: {}
+name: path-project
+class_name: Model
+properties: {}
+children: []
